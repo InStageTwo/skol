@@ -8,7 +8,7 @@
       href="img/Viking-House-Logo.svg"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Viking House</title>
   </head>
   <body class="page">
@@ -25,83 +25,243 @@
         </div>
         <nav class="header-nav">
           <menu class="header-menu">
-            <a href="#" class="menu-item">продукция</a>
-            <a href="#" class="menu-item">о нас</a>
+            <a href="#about" class="menu-item">о нас</a>
+            <a href="#products" class="menu-item">продукция</a>
             <a href="#" class="menu-item">faq</a>
-            <a href="#" class="menu-item">контакты</a>
+            <a href="#footer" class="menu-item">контакты</a>
           </menu>
         </nav>
       </div>
     </header>
     <main id="main">
+      <div class="parallax"></div>
       <div class="main-container">
+        <h3>Погрузитесь в мир</h3>
         <h1 class="main-title">viking house</h1>
+        <h3>и найдите свой идеальный напиток</h3>
       </div>
     </main>
-    <article id="products" class="slider">
-      <section class="slide slide-1 active" data-index="0">
-        <img class="slide-img" src="img/bottle.png" alt="Groot" />
-        <div class="slider-text">
-          <h2 class="text-top">SKOL Пшеничное безалкогольное</h2>
-          <h3 class="text-bottom">
-            У викингов "Skol" означал - за наше здоровье! Этим тостом глава
-            семьи начинал большие праздничные застолья.
-          </h3>
-          <a href="#" class="slider-btn">Подробнее</a>
-        </div>
-      </section>
-      <section class="slide slide-2" data-index="1">
-        <img class="slide-img" src="img/bottle.png" alt="Groot" />
-        <div class="slider-text">
-          <h2 class="text-top">SKOL Пшеничное безалкогольное</h2>
-          <h3 class="text-bottom">
-            У викингов "Skol" означал - за наше здоровье! Этим тостом глава
-            семьи начинал большие праздничные застолья.
-          </h3>
-          <a href="#" class="slider-btn">Подробнее</a>
-        </div>
-      </section>
-      <section class="slide slide-3" data-index="2">
-        <img class="slide-img" src="img/bottle.png" alt="Groot" />
-        <div class="slider-text">
-          <h2 class="text-top">SKOL Пшеничное безалкогольное</h2>
-          <h3 class="text-bottom">
-            У викингов "Skol" означал - за наше здоровье! Этим тостом глава
-            семьи начинал большие праздничные застолья.
-          </h3>
-          <a href="#" class="slider-btn">Подробнее</a>
-        </div>
-      </section>
+    <section id="about">
+      <div class="about-text">
+        <h1 class="about-text-title">О нас</h1>
+        <div class="about-progress">
+          <div class="progress-container">
+            <div class="progress" id="progress-bar"></div>
+          </div>
 
-      <nav class="slider-nav">
-        <a href="javascript:void(0);" class="slider-nav-item" data-index="0">
-          <div class="nav-border">
-            <div class="img-color-1">
-              <img class="nav-img" src="img/bottle.png" alt="bottle" />
+          <a href="#products" id="scroll-to-next-section" class="scroll-button">
+            <svg width="25" height="25" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 4V20M12 20L18 14M12 20L6 14"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="about-cards">
+        <div class="cards">
+          <div class="card" data-index="0">
+            <div class="card-inner">
+              <div class="card-image-container">
+                <img src="img/first.jpeg" alt="" />
+              </div>
+              <div class="card-content">
+                <h1 class="card-title">Ваша любовь к пиву без алкоголя!</h1>
+                <p class="card-description">
+                  Viking House — первая компания в России, которая предлагает
+                  уникальное протеиновое безалкогольное пиво. Мы стремимся
+                  изменить представление о безалкогольных напитках, сочетая вкус
+                  и пользу. Наша продукция создана для тех, кто ценит активный
+                  образ жизни и хочет наслаждаться любимым напитком без лишних
+                  забот. Мы хотим, чтобы вы наслаждались любимым вкусом пива с
+                  заботой о себе!
+                </p>
+              </div>
             </div>
           </div>
-        </a>
-        <a href="javascript:void(0);" class="slider-nav-item" data-index="1">
-          <div class="nav-border">
-            <div class="img-color-1">
-              <img class="nav-img" src="img/bottle.png" alt="bottle" />
+          <div class="card" data-index="0">
+            <div class="card-inner">
+              <div class="card-image-container">
+                <img src="img/contrast.png" alt="" />
+              </div>
+              <div class="card-content">
+                <h1 class="card-title">вкус без компромиссов</h1>
+                <p class="card-description">
+                  Viking House предлагает не просто безалкогольное пиво, а
+                  инновационное решение для настоящих ценителей. Наша
+                  особенность — добавление протеина, что делает наш напиток не
+                  только вкусным, но и питательным. Мы гордимся тем, что можем
+                  предложить вам альтернативу, которая поддержит ваш активный
+                  образ жизни и удовлетворит ваши вкусовые предпочтения.
+                </p>
+              </div>
             </div>
           </div>
-        </a>
-        <a
-          href="javascript:void(0);"
-          class="slider-nav-item active"
-          data-index="2"
+          <div class="card" data-index="0">
+            <div class="card-inner">
+              <div class="card-image-container">
+                <img src="img/health3.jpeg" alt="" />
+              </div>
+              <div class="card-content">
+                <h1 class="card-title">здоровье и польза</h1>
+                <p class="card-description">
+                  Мы создали безалкогольное пиво, которое не только радует
+                  вкусом, но и приносит пользу. Viking House объединяет традиции
+                  пивоварения и современные технологии, чтобы предложить вам
+                  уникальный продукт, который подходит для любого времени и
+                  места. Мы верим, что каждый может наслаждаться вкусом пива,
+                  оставаясь при этом здоровым и активным!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-index="0">
+            <div class="card-inner">
+              <div class="card-image-container">
+                <img src="img/strength.jpeg" alt="" />
+              </div>
+              <div class="card-content">
+                <h1 class="card-title">Сила каждом глотке</h1>
+                <p class="card-description">
+                  Викинги славились своей силой, выносливостью и здоровьем. Они
+                  вдохновили нас на создание наших напитков, для тех, кто ценит
+                  активный образ жизни, качество и заботу о себе.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-index="0">
+            <div class="card-inner">
+              <div class="card-image-container">
+                <img
+                  src="img/bc458f3f-cf8e-4aa9-b52b-0a08132f742a.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="card-content">
+                <h1 class="card-title">Польза</h1>
+                <p class="card-description">
+                  Viking House сочетает в себе насыщенный вкус, полезные
+                  свойства и функциональность. Оно содержит 6 г белка на 100 г
+                  напитка, богатого незаменимыми аминокислотами, которые
+                  помогают восстановить силы после тренировок, заряжают энергией
+                  для новых свершений и поддерживают баланс в повседневной
+                  жизни.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="carousel">
+      <div class="list">
+        <div
+          class="item active"
+          style="
+            --img-src: url('img/neipa.png');
+            --bg-color: #362c1e;
+            --title: 'Viking';
+          "
         >
-          <div class="nav-border">
-            <div class="img-color-1">
-              <img class="nav-img" src="img/bottle.png" alt="bottle" />
+          <div class="content">
+            <div class="image"></div>
+            <div class="info">
+              <div class="title">Viking NEIPA</div>
+              <div class="category">Безалкогольное протеиновое пиво</div>
+              <div class="des">
+                "Viking" - это протеиновое пиво, созданное с использованием
+                хмеля Cryo Citra и Talus. Оно поможет вам создать атмосферу
+                веселья и общности, и вдохновит на новые свершения. Пусть
+                "Viking" станет вашим спутником в любых приключениях, будь то
+                дружеская встреча или спортивное соревнование.
+              </div>
+              <a href="">
+                Узнать больше
+                <span>-></span>
+              </a>
             </div>
           </div>
-        </a>
-      </nav>
-    </article>
+        </div>
+        <div
+          class="item"
+          style="
+            --img-src: url('img/saga.png');
+            --bg-color: #eeaa19;
+            --title: 'Saga';
+          "
+        >
+          <div class="content">
+            <div class="image"></div>
+            <div class="info">
+              <div class="title">Saga Sour Ale</div>
+              <div class="category">Безалкогольное протеиновое пиво</div>
+              <div class="des">
+                "Saga" - это уникальное протеиновое пиво, в стиле Sour Ale с
+                добавлением сочного ананаса. Этот освежающий напиток станет
+                вашим спутником в любых приключениях, будь то солнечный день на
+                пляже, дружеская вечеринка или активные соревнования. Напишите
+                свою сагу и пусть каждый глоток станет новой страницей в вашей
+                истории.
+              </div>
+              <a href="">
+                Узнать больше
+                <span>-></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="
+            --img-src: url('img/skol.png');
+            --bg-color: #881010;
+            --title: 'Skol';
+          "
+        >
+          <div class="content">
+            <div class="image"></div>
+            <div class="info">
+              <div class="title">Skol</div>
+              <div class="category">Безалкогольное Пшеничное пиво</div>
+              <div class="des">
+                У викингов "Skol" означал - за наше здоровье! В средневековой
+                Скандинавии этим тостом глава семьи начинал большие праздничные
+                застолья. Гости ему дружно вторили "Skol" и начинался пир.
+                Говорят, что этим же выкриком викинги поднимали боевой дух,
+                когда шли в атаку на врага. А мы рекомендуем насладиться этим
+                отличным безалкогольным пивом исключительно в кругу хороших
+                друзей. Skol!
+              </div>
+              <a href="">
+                Узнать больше
+                <span>-></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="arrows">
+          <button id="prev"><</button>
+          <button id="next">></button>
+        </div>
+        <ul class="dots">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </section>
 
+    <section class="reviews"></section>
+    <footer id="footer">
+      <div class="social-media"><!-- Социальные сети --></div>
+    </footer>
     <script src="js/main.js"></script>
   </body>
 </html>
