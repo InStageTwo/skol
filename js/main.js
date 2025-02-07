@@ -148,6 +148,8 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   initializeCarousel();
-  initializeCards();
+  window.addEventListener('resize', () => {
+    initializeCards();
+  });
   resetAutoRun();
 });
