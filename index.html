@@ -27,7 +27,8 @@
           <menu class="header-menu">
             <a href="#about" class="menu-item">о нас</a>
             <a href="#products" class="menu-item">продукция</a>
-            <a href="#" class="menu-item">faq</a>
+            <a href="#marketplace" class="menu-item">купить</a>
+            <a href="#faq" class="menu-item">faq</a>
             <a href="#footer" class="menu-item">контакты</a>
           </menu>
         </nav>
@@ -44,10 +45,10 @@
       <div class="about-text">
         <h1 class="about-text-title">О нас</h1>
         <div class="about-progress">
-          <div class="progress-container">
+          <!-- <div class="progress-container">
             <div class="progress" id="progress-bar"></div>
-          </div>
-
+          </div> -->
+          <div class="about-icons"></div>
           <a href="#products" id="scroll-to-next-section" class="scroll-button">
             <svg width="25" height="25" viewBox="0 0 24 24" fill="none">
               <path
@@ -256,11 +257,99 @@
         </ul>
       </div>
     </section>
+    <section id="faq">
+      <article>
+        <div class="faqs-head">
+          <img
+            src="img/question.svg"
+            alt="Question icon next to FAQs"
+            class="question-icon"
+          />
+          <h1>FAQs</h1>
+        </div>
+        <div class="question-container">
+          <div class="question-head">
+            <h2 class="question">
+              Какой тип белка используется при изготовлении?
+            </h2>
+            <img
+              src="img/icon-plus.svg"
+              alt="plus icon to open"
+              class="icon-open"
+            />
+          </div>
+          <div class="question-body hide-item">
+            <p>
+              При изготовлении протеинового пива используется сывороточный
+              протеин. Он содержит все необходимые аминокислоты, что
+              способствует синтезу белка и росту мышечной массы, быстро
+              усваивается и помогает восстановить мышцы.
+            </p>
+          </div>
+        </div>
+        <div class="question-container">
+          <div class="question-head">
+            <h2 class="question">Почему пиво называется НЕ IPA?</h2>
+            <img
+              src="img/icon-plus.svg"
+              alt="plus icon to open"
+              class="icon-open"
+            />
+          </div>
+          <div class="question-body hide-item">
+            <p>
+              NEIPA (New England IPA) — это подтип индийского пэйл эля,
+              отличающийся яркими фруктовыми и цитрусовыми ароматами (манго,
+              ананас, грейпфрут) и более низким уровнем горечи по сравнению с
+              традиционными IPA. Он имеет мутный вид, благодаря овсу, пшенице и
+              дрожжам, которые не оседают в процессе ферментации, что делает его
+              мягким и приятным для питья.
+            </p>
+          </div>
+        </div>
+        <div class="question-container">
+          <div class="question-head">
+            <h2 class="question">Сколько калорий на банку пива?</h2>
+            <img
+              src="img/icon-plus.svg"
+              alt="plus icon to open"
+              class="icon-open"
+            />
+          </div>
+          <div class="question-body hide-item">
+            <p>
+              В протеиновом Viking Neipa содержится 287 ккал. В протеиновом
+              ананасовом Saga - 303 ккал на банку.
+            </p>
+          </div>
+        </div>
+        <div class="question-container">
+          <div class="question-head">
+            <h2 class="question">
+              Безалкогольное - значит в пиве совсем нет спирта?
+            </h2>
+            <img
+              src="img/icon-plus.svg"
+              alt="plus icon to open"
+              class="icon-open"
+            />
+          </div>
+          <div class="question-body hide-item">
+            <p>
+              Безалкогольное пиво — это напиток, по вкусу похожий на
+              традиционное пиво, но содержащий небольшое количество алкоголя (в
+              РФ это не более 0,5%)
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
 
-    <section class="reviews"></section>
+    <section id="marketplace"></section>
     <footer id="footer">
       <div class="social-media"><!-- Социальные сети --></div>
     </footer>
+
     <script src="js/main.js"></script>
   </body>
 </html>

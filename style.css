@@ -543,3 +543,114 @@ menu {
   --transform-from: 0;
   --transform-to: var(--transform);
 }
+
+#faq {
+  min-height: 100vh;
+  background-image: url(img/runes.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.question-icon {
+  width: 3rem;
+}
+article {
+  background-color: rgb(137 131 118);
+  max-width: 40rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+  top: 13rem;
+  padding: 0 2.4rem 0.6rem 2.4rem;
+  gap: 1.8rem;
+}
+.faqs-head {
+  display: flex;
+  align-items: center;
+  font-size: 2.2rem;
+  color: var(--dark-purple);
+  gap: 1.4rem;
+  margin-top: 2.6rem;
+}
+
+.question-container {
+  border-bottom: 1px solid blanchedalmond;
+  padding-bottom: 1.8rem;
+}
+.hide-item {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+.open-item {
+  max-height: 200px;
+}
+.question-container:last-child {
+  border-bottom: none;
+}
+.question-container p {
+  display: block;
+  margin-top: 1.8rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+.question-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.question-head h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.question:hover {
+  color: lightcyan;
+  cursor: pointer;
+}
+.icon-open {
+  cursor: pointer;
+  width: 30px;
+}
+@media (max-width: 89em) {
+  article {
+    top: 9rem;
+  }
+}
+@media (max-width: 69em) {
+  article {
+    top: 3rem;
+  }
+}
+@media (max-width: 44em) {
+  article {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  body {
+    background-size: 65rem;
+  }
+  .question {
+    margin-right: 2rem;
+  }
+}
+@media (max-width: 24em) {
+  .faqs-head {
+    font-size: 1.6rem;
+    gap: 1rem;
+  }
+  .star-icon {
+    width: 2rem;
+  }
+  .question-head h2 {
+    font-size: 1.1rem;
+  }
+  .question-container p {
+    font-size: 1rem;
+  }
+  .open-item {
+    max-height: 350px;
+  }
+}

@@ -9,19 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
   let active = 0;
   let zIndex = 2;
 
-  // Progress Bar and Cards
   const cardsContainer = document.querySelector('.cards');
   const cards = document.querySelectorAll('.card');
   const aboutSection = document.querySelector('#about');
-  const progressBar = document.getElementById('progress-bar');
 
-  // Initialize Carousel
   const initializeCarousel = () => {
-    // Set initial active item
     list[active].classList.add('active');
     dots[active].classList.add('active');
 
-    // Event listeners for next/prev buttons
     nextBtn.onclick = () => {
       const newValue = active + 1 > TOTAL_ITEMS - 1 ? 0 : active + 1;
       setItemActive(newValue, 'next');
@@ -32,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
       setItemActive(newValue, 'prev');
     };
 
-    // Event listeners for dots
     dots.forEach((dot, index) => {
       dot.addEventListener('click', () => {
         setItemActive(index);
@@ -40,48 +34,39 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   };
 
-  // Set Active Item in Carousel
   const setItemActive = (newValue, type) => {
     if (newValue === active) return;
 
-    // Remove active class from old item and dot
     list[active].classList.remove('active');
     dots[active].classList.remove('active');
 
-    // Update active index
     active = newValue;
 
-    // Add active class to new item and dot
     list[active].classList.add('active');
     dots[active].classList.add('active');
 
-    // Update zIndex
     zIndex = zIndex >= 150 ? 2 : zIndex + 1;
     list[active].style.zIndex = zIndex;
 
-    // Apply transform effect
     carousel.style.setProperty(
       '--transform',
       type === 'next' ? '300px' : '-300px'
     );
     carousel.classList.add('effect');
 
-    // Remove effect after animation
     setTimeout(() => {
       carousel.classList.remove('effect');
     }, 1500);
 
-    // Reset auto-run timer
     resetAutoRun();
   };
 
-  // Auto-run Carousel
   let autoRunTimer;
   const resetAutoRun = () => {
     clearTimeout(autoRunTimer);
     autoRunTimer = setTimeout(() => {
       nextBtn.click();
-    }, 5000);
+    }, 9000);
   };
 
   const initializeCards = () => {
@@ -91,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
       `${cards[0].clientHeight}px`
     );
 
-    // Add padding to cards
     Array.from(cards).forEach((card, index) => {
       const offsetTop = 20 + index * 20;
       card.style.paddingTop = `${offsetTop}px`;
@@ -102,7 +86,6 @@ document.addEventListener('DOMContentLoaded', function () {
       const cardInner = card.querySelector('.card-inner');
       const toScale = 1 - (cards.length - 1 - index) * 0.1;
 
-      // Observe next card for intersection
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach(({ isIntersecting, intersectionRatio }) => {
@@ -121,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
               })})`;
 
               changeBackground(index);
-              updateProgressBar(index);
+              // updateProgressBar(index);
             }
           });
         },
@@ -142,14 +125,48 @@ document.addEventListener('DOMContentLoaded', function () {
     aboutSection.classList.add(`about-bg-${index + 1}`);
   };
 
-  const updateProgressBar = (index) => {
-    const progressPercentage = ((index + 1) / cards.length) * 100;
-    progressBar.style.height = `${progressPercentage}%`;
-  };
+  // const updateProgressBar = (index) => {
+  //   const progressPercentage = ((index + 1) / cards.length) * 100;
+  //   progressBar.style.height = `${progressPercentage}%`;
+  // };
 
   initializeCarousel();
   window.addEventListener('resize', () => {
     initializeCards();
   });
   resetAutoRun();
+
+  const openButtons = document.querySelectorAll('.icon-open');
+  const paragraphContent = document.querySelectorAll('.question-body');
+  const questions = document.querySelectorAll('.question');
+
+  openButtons.forEach((button, index) => {
+    button.addEventListener('click', function () {
+      toggleContent(index);
+    });
+  });
+
+  questions.forEach((question, index) => {
+    question.addEventListener('click', function () {
+      toggleContent(index);
+    });
+  });
+
+  function toggleContent(index) {
+    paragraphContent.forEach((content, i) => {
+      if (i !== index) {
+        content.classList.remove('open-item');
+        if (openButtons[i]) {
+          openButtons[i].src = 'img/icon-plus.svg';
+        }
+      }
+    });
+
+    const isOpen = paragraphContent[index].classList.toggle('open-item');
+    if (openButtons[index]) {
+      openButtons[index].src = isOpen
+        ? 'img/icon-minus.svg'
+        : 'img/icon-plus.svg';
+    }
+  }
 });
