@@ -87,6 +87,75 @@ menu {
 
 .menu-item {
   flex-grow: 1;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .burger-menu {
+    width: 40px;
+    height: 40px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .burger-top,
+  .burger-bottom {
+    border: 1px solid black;
+    width: 20px;
+    transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
+    position: absolute;
+  }
+
+  .burger-top {
+    top: 15px;
+    left: 1px;
+  }
+
+  .burger-bottom {
+    bottom: 15px;
+    left: 1px;
+  }
+
+  .burger-menu.burger-menu-active .burger-top {
+    transform: rotate(45deg);
+    top: 50%;
+    margin-top: -1px;
+  }
+
+  .burger-menu.burger-menu-active .burger-bottom {
+    transform: rotate(-45deg);
+    bottom: 50%;
+    margin-bottom: -1px;
+  }
+
+  .header-menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 130px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 130px);
+    background-color: white;
+    transition: right 0.5s ease-in-out;
+    z-index: 10;
+  }
+
+  .header-menu.header-menu-active {
+    right: 0;
+    display: flex;
+  }
+
+  .menu-item {
+    padding: 20px;
+    font-size: 24px;
+  }
 }
 
 #main {
@@ -294,6 +363,11 @@ menu {
     flex-direction: column;
   }
 
+  .about-text-title {
+    padding-top: 5px;
+    padding-bottom: 25px;
+  }
+
   .about-cards {
     flex: 2;
     max-width: 900px;
@@ -312,6 +386,23 @@ menu {
   .about-cards {
     width: 100%;
     padding: 0 20px;
+  }
+
+  #header {
+    height: 100px;
+    background: white;
+  }
+  .header-container {
+    height: inherit;
+  }
+
+  .header-menu {
+    top: 100px;
+  }
+
+  .logo {
+    width: 80%;
+    height: 80%;
   }
 }
 
@@ -622,7 +713,7 @@ article {
 }
 @media (max-width: 69em) {
   article {
-    top: 3rem;
+    top: 0;
   }
 }
 @media (max-width: 44em) {
@@ -666,8 +757,8 @@ article {
   display: flex;
   flex: 1;
   align-items: center;
-  justify-content: center; /* Центрируем текст */
-  text-align: center; /* Центрируем текст */
+  justify-content: center;
+  text-align: center;
 }
 
 .marketplace-signpost {
@@ -676,15 +767,15 @@ article {
   flex-direction: column;
   position: relative;
   width: 100%;
-  height: 500px; /* Фиксированная высота для контейнера */
+  height: 500px;
 }
 
 .post {
   background: url(img/post.png) no-repeat;
-  background-position: center; /* Центрируем изображение post */
+  background-position: center;
   background-size: contain;
-  width: 100%; /* Ширина поста будет занимать 100% ширины контейнера */
-  height: 100%; /* Высота поста будет занимать 100% высоты контейнера */
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -694,7 +785,9 @@ article {
   position: absolute;
   width: 50%;
   height: 20%;
-  transform: translate(-50%, -50%); /* Центрируем стрелки */
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  pointer-events: none;
 }
 
 .top-arrow {
@@ -703,6 +796,11 @@ article {
   top: 15%;
   left: 49%;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 26px;
 }
 
 .mid-arrow {
@@ -711,6 +809,11 @@ article {
   top: 31%;
   left: 55%;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 60px;
+  padding-bottom: 10px;
 }
 
 .bottom-arrow {
@@ -719,9 +822,9 @@ article {
   top: 47%;
   left: 50%;
   background-position: center;
-  display: flex; /* Используем Flexbox для центрирования */
-  justify-content: center; /* Центрируем по горизонтали */
-  align-items: center; /* Центрируем по вертикали */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-bottom: 37px;
   padding-left: 26px;
 }
@@ -729,6 +832,19 @@ article {
 .ozon {
   width: 100px;
   height: 23px;
+  pointer-events: auto;
+}
+
+.wb {
+  width: 100px;
+  height: 23px;
+  pointer-events: auto;
+}
+
+.yandex {
+  width: 200px;
+  height: 90px;
+  pointer-events: auto;
 }
 
 @media (max-width: 768px) {
@@ -749,10 +865,13 @@ article {
 
   .top-arrow {
     top: 16%;
+    padding-top: 12px;
   }
 
   .mid-arrow {
     top: 32%;
+    padding-top: 7px;
+    padding-left: 23px;
   }
 
   .bottom-arrow {
@@ -762,5 +881,9 @@ article {
   .ozon {
     width: 90px;
     height: 20px;
+  }
+  .wb {
+    height: 18px;
+    width: 90px;
   }
 }
